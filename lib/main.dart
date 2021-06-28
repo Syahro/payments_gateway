@@ -13,12 +13,26 @@ class MyApp extends StatelessWidget {
         backgroundColor: backgroundColor,
       ),
       home: Scaffold(
-        body: Column(
-          children: [
-            SizedBox(
-              height: 50,
-            ),
-          ],
+        body: Container(
+          width: MediaQuery.of(context).size.width - (2 * defaultMargin),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 50,
+              ),
+              Image.asset(
+                'assets/images/illustration.png',
+                width: 200,
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              Text(
+                'Upgrade to Pro',
+                style: titleTextStyle.copyWith(color: textWhiteColor),
+              ),
+            ],
+          ),
         ),
       ),
     );
